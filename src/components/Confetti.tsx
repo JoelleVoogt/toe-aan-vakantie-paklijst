@@ -89,5 +89,10 @@ export function Confetti({ trigger }: ConfettiProps) {
     return () => cancelAnimationFrame(rafId);
   }, [trigger]);
 
-  return <canvas className="confetti-overlay" ref={canvasRef} />;
+  return (
+    <canvas
+      className="pointer-events-none fixed inset-0 z-1000"
+      ref={canvasRef}
+    />
+  );
 }

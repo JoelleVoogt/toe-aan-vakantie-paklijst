@@ -47,7 +47,7 @@ export default function App() {
   return (
     <>
       <Hero checkedCount={checkedItems} progressPct={progressPct} />
-      <main className="container">
+      <main className="mx-auto max-w-(--layout-container-max-width) px-(--layout-container-padding) py-(--spacing-xl)">
         <Actions
           onCheckAll={() => toggleAll(true)}
           onExpandAll={() => setAllOpen(true)}
@@ -56,7 +56,9 @@ export default function App() {
         />
         <div>{categories}</div>
       </main>
-      <footer>Fijn weekend weg! Vergeet je knuffel niet.</footer>
+      <footer className="border-t border-(--border-neutral-2) px-(--layout-container-padding) py-(--spacing-lg) text-center text-(length:--body-size-sm) text-(--content-2)">
+        Fijn weekend weg! Vergeet je knuffel niet.
+      </footer>
       <Confetti trigger={confettiTrigger} />
     </>
   );
