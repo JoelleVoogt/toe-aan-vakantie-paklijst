@@ -9,8 +9,14 @@ interface ItemRowProps {
 
 export function ItemRow({ item, itemKey, checked, onToggle }: ItemRowProps) {
   return (
-    <div className="flex items-center gap-(--spacing-xs) border-b border-(--border-neutral-1) px-(--spacing-sm) py-(--spacing-xs) transition-colors last:border-b-0 hover:bg-(--surface-neutral-1)">
-      <label className="relative h-5.5 w-5.5 shrink-0">
+    <div
+      className="flex cursor-pointer items-center gap-(--spacing-xs) border-b border-(--border-neutral-1) px-(--spacing-sm) py-(--spacing-xs) transition-colors last:border-b-0 hover:bg-(--surface-neutral-1)"
+      onClick={() => onToggle(itemKey, !checked)}
+    >
+      <label
+        className="relative h-5.5 w-5.5 shrink-0"
+        onClick={(e) => e.stopPropagation()}
+      >
         <input
           type="checkbox"
           className="peer absolute inset-0 m-0 h-full w-full cursor-pointer opacity-0"
@@ -36,12 +42,11 @@ export function ItemRow({ item, itemKey, checked, onToggle }: ItemRowProps) {
         </span>
       </label>
       <span
-        className={`flex-1 cursor-pointer text-(length:--body-size-md) transition-colors ${
+        className={`flex-1 text-(length:--body-size-md) transition-colors ${
           checked
             ? "text-(--content-2) line-through decoration-(--border-neutral-3)"
             : ""
         }`}
-        onClick={() => onToggle(itemKey, !checked)}
       >
         {item.name}
       </span>
