@@ -14,7 +14,9 @@ export default function App() {
   );
   const [confettiTrigger, setConfettiTrigger] = useState(0);
 
-  const progressPct = totalItems ? Math.round((checkedItems / totalItems) * 100) : 0;
+  const progressPct = totalItems
+    ? Math.round((checkedItems / totalItems) * 100)
+    : 0;
 
   useEffect(() => {
     if (progressPct === 100) {
@@ -57,7 +59,7 @@ export default function App() {
         <div>{categories}</div>
       </main>
       <footer className="border-t border-(--border-neutral-2) px-(--layout-container-padding) py-(--spacing-lg) text-center text-(length:--body-size-sm) text-(--content-2)">
-        Fijn weekend weg! Vergeet je knuffel niet.
+        Fijn weekend! Vergeet je knuffel niet!
       </footer>
       <Confetti trigger={confettiTrigger} />
     </>

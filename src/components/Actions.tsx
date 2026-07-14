@@ -6,7 +6,7 @@ interface ActionsProps {
 }
 
 const btnBase =
-  "rounded-full border px-(--spacing-md) py-(--spacing-xs) text-(length:--body-size-sm) font-medium transition-colors";
+  "cursor-pointer rounded-full border px-(--spacing-md) py-(--spacing-xs) text-(length:--body-size-sm) font-medium transition-colors";
 
 export function Actions({
   onCheckAll,
