@@ -23,7 +23,7 @@ export function Hero({ checkedCount, progressPct }: HeroProps) {
         </h1>
         <p className="mx-auto mb-(--spacing-lg) max-w-130 text-(length:--body-size-lg) leading-(--font-body-lg-line-height) text-(--color-neutral-300)">
           Kan iemand aub alvast een ijskouwe pilsie koud leggen voor mij?!?!! En
-          de jacuzzi alvast opwarmen??!?! AAHHHH
+          de jacuzzi opwarmen??!?! AAHHHH
         </p>
         <div className="mx-auto max-w-[400px]">
           <div className="mb-(--spacing-2xs) flex justify-between text-(length:--body-size-sm) text-(--color-neutral-400)">
