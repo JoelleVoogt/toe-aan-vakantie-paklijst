@@ -1,1 +1,7 @@
 .vercel
+.DS_Store
+node_modules
+dist
+Anthropic-TypeSystem-FontStack-26.043.1/
+giga-ai-design-patterns.md
+.claude/
